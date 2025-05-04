@@ -1,0 +1,101 @@
+/* General proprotions */
+
+body {
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.header-grid {
+  background-color: red;
+  display: grid;
+  grid-template-areas:
+    "left-header-nav    left-header-nav    left-header-nav    right-header-nav    right-header-nav    right-header-nav"
+    "title              title              search-bar         search-bar          finance-link        finance-link";
+  grid-template-rows: 20fr 80fr;
+}
+
+.left-header-nav {
+  background-color: red;
+  grid-area: left-header-nav;
+}
+
+.right-header-nav {
+  background-color: orange;
+  grid-area: right-header-nav;
+}
+
+.header-grid h1 {
+  background-color: orange;
+  grid-area: title;
+}
+
+.search-bar {
+  background-color: yellow;
+  grid-area: search-bar;
+}
+
+.finance-link {
+  background-color: red;
+  grid-area: finance-link;
+}
+
+/* Main */
+.main-info {
+  display: flex;
+}
+
+.left-main-nav {
+  flex: 20 1 20vw;
+  background-color: lightgreen;
+}
+
+.product-card-grid {
+  flex: 80 1 80vw;
+  background-color: lightblue;
+}
+
+/* Footer */
+.footer-grid {
+  display: grid;
+  grid-template-areas:
+    "left-title    middle-title    right-title"
+    "left-links    middle-links    right-links";
+}
+
+.left-link-title {
+  grid-area: left-title;
+  background-color: red;
+}
+
+.left-links {
+  grid-area: left-links;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-link-title {
+  grid-area: middle-title;
+  background-color: yellow;
+}
+
+.middle-links {
+  grid-area: middle-links;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-link-title {
+  grid-area: right-title;
+  background-color: red;
+}
+
+.right-links {
+  grid-area: right-links;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}

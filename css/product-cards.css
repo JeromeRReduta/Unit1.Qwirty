@@ -1,0 +1,49 @@
+:root {
+  --min-card-width: 16rem; /* from inspecting max width of card */
+  --max-card-width: 28rem;
+  --card-height: 25rem;
+}
+
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-card-width), 1fr));
+  grid-auto-rows: var(--card-height);
+  background-color: blue;
+  gap: 1rem;
+}
+
+.product-card {
+  display: grid;
+
+  grid-template-areas:
+    "title    title"
+    "img      img"
+    "desc     desc"
+    "price    button";
+  grid-template-columns: 85fr 15fr;
+}
+
+.product-card-title {
+  grid-area: title;
+  background-color: purple;
+}
+
+.product-card-img {
+  grid-area: img;
+  background-color: lightblue;
+}
+
+.product-card-desc {
+  grid-area: desc;
+  background-color: yellow;
+}
+
+.product-card-price {
+  grid-area: price;
+  background-color: white;
+}
+
+.product-card-cart-button {
+  grid-area: button;
+  background-color: black;
+}
