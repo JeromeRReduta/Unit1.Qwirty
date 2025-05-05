@@ -1,0 +1,28 @@
+:root {
+  /* Colors shamelessly stolen from inspect tool */
+  --background: #eee;
+  --foreground: #44b;
+  --foreground-dark: #228;
+  /* These ones are just guesses */
+  --link-color: #eee;
+  --text-color: black;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.top-navbar a,
+.footer-link-section * {
+  color: var(--background);
+}
+
+.header-top-band,
+footer,
+.top-navbar a {
+  background-color: var(--foreground);
+}
+
+.site-title {
+  color: var(--foreground);
+}

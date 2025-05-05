@@ -1,0 +1,22 @@
+/* .left-main-nav ul li a {
+  background: lightyellow;
+  color: orange;
+  font-size: 1.5rem;
+} */
+
+.left-main-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5vh;
+  margin: 0vh 5% 0vh 5%;
+}
+
+.left-top-nav ul {
+  justify-content: flex-start;
+}
+
+.right-top-nav ul {
+  justify-content: flex-end;
+}

@@ -1,3 +1,13 @@
+/* Border-box fix */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* Reset */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -128,4 +138,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
 }
