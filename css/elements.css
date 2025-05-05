@@ -1,8 +1,9 @@
 :root {
-  --min-card-width: 16rem; /* from inspecting max width of card */
-  --max-card-width: 28rem;
+  --min-card-width: 15rem; /* from inspecting max width of card */
+  --max-card-width: 350px;
   --card-height: 25rem;
   --left-main-nav-link-color: #2f258b;
+  --product-title-size: 1.5em;
 }
 
 /* Product-card */
@@ -17,27 +18,43 @@
     "price    button";
   grid-template-columns: 85fr 15fr;
   grid-template-rows: 15fr 37.5fr 37.5fr 10fr;
+  row-gap: 0px;
+  column-gap: 0px;
+}
+
+.product-card :not(.product-card-img) {
+  padding-left: 0.5em;
 }
 
 .product-card-title {
   grid-area: title;
   background-color: var(--foreground);
   color: var(--background);
+  font-size: var(--product-title-size);
+}
+
+.product-img-container {
+  grid-area: img;
+  overflow: hidden;
 }
 
 .product-card-img {
-  grid-area: img;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .product-card-desc {
   grid-area: desc;
   background-color: var(--background);
   color: var(--text-color);
+  width: 100%;
 }
 
 .product-card-price {
   grid-area: price;
   background-color: var(--foreground);
+  color: var(--background);
 }
 
 .product-card-cart-button {
@@ -46,16 +63,16 @@
 
 /* left-main-nav-button */
 
-.left-main-nav ul li {
-  background: var(--left-main-nav-link-color);
-  font-size: 1.5rem;
+.left-main li {
+  background-color: var(--foreground);
   width: 100%;
-  margin: 0% 2% 0% 0%;
+  margin: 0% 4% 0% 2%;
+  font-size: 1.5em;
 }
 
-.left-main-nav ul li a {
+.left-main a {
   text-decoration: none;
-  color: white;
+  color: var(--background);
 }
 
 /* top-navs */
