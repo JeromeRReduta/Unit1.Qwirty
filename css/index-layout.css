@@ -1,0 +1,55 @@
+:root {
+  /* Colors ripped from site */
+  --base-purple: #4444bb;
+  --dark-base-purple: #222288;
+  --off-white: #eeeeee;
+  --base-red: #d30808;
+}
+
+/* Thanks https://www.digitalocean.com/community/tutorials/css-css-grid-holy-grail-layout */
+body {
+  display: grid;
+  grid-template-areas:
+    "a header b"
+    ".      main   ."
+    "c footer d";
+  background-color: var(--off-white);
+  height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--base-purple);
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--base-purple);
+}
+
+.empty {
+  background-color: var(--base-purple);
+  width: auto;
+  height: auto;
+}
+
+#a {
+  grid-area: a;
+}
+
+#b {
+  grid-area: b;
+}
+
+#c {
+  grid-area: c;
+}
+
+#d {
+  grid-area: d;
+}
