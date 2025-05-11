@@ -1,0 +1,30 @@
+header,
+footer {
+    display: flex;
+    align-items: center;
+}
+
+header a,
+footer a {
+    color: white;
+}
+
+header a + a {
+    border-left: 1.5px solid white;
+}
+
+header {
+    justify-content: space-between;
+    margin: 0rem 1.5rem;
+}
+
+footer {
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer > nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
